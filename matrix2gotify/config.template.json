@@ -1,8 +1,0 @@
-{
-  "MATRIX_HTTP_HOST": "xxx.xxx.xxx.your hostname",
-  "MATRIX_HTTP_PORT": "8000",
-  "GOTIFY_HTTP_HOST": "xxx.xxx.xxx.xxx / your hostname",
-  "GOTIFY_HTTP_PORT": "8000",
-  "MATRIX_ACCESS_TOKEN": "your token",
-  "GOTIFY_APP_TOKEN": "your token"
-}
