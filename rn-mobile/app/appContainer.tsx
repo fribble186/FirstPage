@@ -5,6 +5,7 @@ import { useRoute } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Linking } from "react-native";
 
 const AppContainer = () => {
   const route = useRoute();
@@ -56,6 +57,21 @@ const AppContainer = () => {
       source={{ uri: url }}
       onNavigationStateChange={handleNavigationStateChange}
       onLoadEnd={endLoadWebView}
+      setSupportMultipleWindows={false}
+      onShouldStartLoadWithRequest={(request) => {
+        console.log("onShouldStartLoadWithRequest");
+        // 检查 URL，判断是否为内部链接
+        const isInternalLink = request.url.startsWith(url);
+
+        if (isInternalLink) {
+          // 返回 true 表示在 WebView 内加载
+          return true;
+        } else {
+          // 对于外部链接，返回 false 并使用 Linking 打开外部浏览器
+          Linking.openURL(request.url);
+          return false;
+        }
+      }}
     />
   );
 };
