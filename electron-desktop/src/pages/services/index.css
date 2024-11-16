@@ -1,0 +1,33 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6f4ff;
+  padding: 2vw;
+  height: 100vh;
+}
+.card_container {
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  gap: 20px; /* 设置卡片之间的间距 */
+}
+.services_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.services_card {
+  width: calc(76vw / 3 - 20px);
+  height: 100px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .services_card {
+    width: calc(76vw / 2 - 20px); /* 屏幕宽度小于 768px 时，每行放 2 个卡片 */
+  }
+}
+
+@media (max-width: 480px) {
+  .services_card {
+    width: calc(76vw - 20px); /* 屏幕宽度小于 480px 时，每行放 1 个卡片 */
+  }
+}

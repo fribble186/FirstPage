@@ -1,0 +1,12 @@
+.shortcuts {
+  padding: 2vw;
+  height: 100vh;
+  background-color: #e6f4ff;
+  display: flex;
+  flex-direction: column;
+}
+.shortcuts_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
