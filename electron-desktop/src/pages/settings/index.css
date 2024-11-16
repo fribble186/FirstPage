@@ -1,0 +1,31 @@
+.settings {
+  padding: 2vw;
+  height: 100vh;
+  background-color: #e6f4ff;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+}
+.settings_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.settings_card_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.mb_12 {
+  margin-bottom: 12px;
+}
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.mr_12 {
+  margin-right: 12px;
+}
+.t_12 {
+  font-size: 12px;
+}

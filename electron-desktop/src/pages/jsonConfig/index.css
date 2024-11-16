@@ -1,0 +1,42 @@
+.jsonconfig {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.jsonconfig_left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f4ff;
+  -webkit-app-region: drag;
+}
+.jsonconfig_right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jsonconfig_right_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.jsonconfig_right_form_input {
+  width: 320px;
+}
+.jsonconfig_right_form_button {
+  width: 320px;
+}
+.jsonconfig_logo {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+.jsonconfig_logo_img {
+  width: 72px;
+  height: 72px;
+  margin-right: 12px;
+}
