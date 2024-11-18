@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo, useContext } from "react";
 import "./App.css";
-import { Layout, Menu } from "antd";
+import { Divider, Layout, Menu } from "antd";
 
 import {
   MENUS,
@@ -81,12 +81,31 @@ const App = () => {
       <div>
         <Layout className="app">
           <Layout.Sider width="15%" className="app_sider">
-            <div className="app_logo_container">
-              <img
-                className="app_logo_img"
-                src={`${process.env.PUBLIC_URL}/logo.png`}
-              />
-              <span onClick={() => navigate("/")}>FirstPage</span>
+            <div>
+              <div className="app_logo_container">
+                <img
+                  className="app_logo_img"
+                  src={`${process.env.PUBLIC_URL}/logo.png`}
+                />
+                <span onClick={() => navigate("/")}>FirstPage</span>
+              </div>
+              <div className="app_control_bar">
+                <div
+                  className="app_control_bar_item"
+                  style={{
+                    borderRight: "1px solid white",
+                  }}
+                  onClick={window.electron.minWindow}
+                >
+                  最小化
+                </div>
+                <div
+                  className="app_control_bar_item"
+                  onClick={window.electron.closeWindow}
+                >
+                  关闭
+                </div>
+              </div>
             </div>
             <Menu
               theme="light"

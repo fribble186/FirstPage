@@ -51,9 +51,7 @@ const URLWebview: React.FC<{
 
   return (
     <div style={{ height: "100vh" }}>
-      <div
-        style={{ display: "flex", alignItems: "center", padding: "8px 16px" }}
-      >
+      <div className="services_webview_title_bar">
         <Button
           shape="circle"
           icon={loading ? <LoadingOutlined spin /> : <ArrowLeftOutlined />}
@@ -62,6 +60,7 @@ const URLWebview: React.FC<{
           style={{ marginRight: "12px" }}
         />
         <span>{title}</span>
+        <div className="services_webview_title_bar_drag" />
       </div>
       <div style={{ flex: 1 }}>
         <webview

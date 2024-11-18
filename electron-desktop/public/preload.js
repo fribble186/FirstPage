@@ -18,6 +18,8 @@ contextBridge.exposeInMainWorld("electron", {
     ipcRenderer.send("save-decrypted-json", decryptedJson),
   removeDecrypedJson: () => ipcRenderer.send("remove-decrypted-json"),
   triggerShortcut: (url) => ipcRenderer.send("start-trigger-shortcut", url),
+  minWindow: () => ipcRenderer.send("window-control", "minimize"),
+  closeWindow: () => ipcRenderer.send("window-control", "close"),
   // action
   onDecryptedJsonFound: (callback) =>
     ipcRenderer.on("decrypted-json-found", (event, result) => callback(result)),

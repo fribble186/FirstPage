@@ -157,6 +157,25 @@ function createWindow() {
   ipcMain.on("start-trigger-shortcut", (e, url, headers) => {
     triggerUrl(url, headers);
   });
+  ipcMain.on("window-control", (event, action) => {
+    if (mainWindow) {
+      switch (action) {
+        case "minimize":
+          mainWindow.minimize();
+          break;
+        case "maximize":
+          if (mainWindow.isMaximized()) {
+            mainWindow.unmaximize();
+          } else {
+            mainWindow.maximize();
+          }
+          break;
+        case "close":
+          mainWindow.close();
+          break;
+      }
+    }
+  });
   //   const startUrl = process.env.ELECTRON_START_URL || `file://${path.join(__dirname, '../build/index.html')}`;
   //   mainWindow.loadURL(startUrl);
   if (process.env.NODE_ENV === "development") {

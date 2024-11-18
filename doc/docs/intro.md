@@ -29,7 +29,7 @@ sidebar_position: 1
 - [ ] 方便的的配置界面
 - [ ] 后台配置界面
 - [ ] notification 和其它原生能力
-- [ ] electron 客户端（Mac, Windows）
+- [x] electron 客户端（Mac, Windows）
 - [ ] web 页面
 
 Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.

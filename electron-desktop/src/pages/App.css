@@ -52,3 +52,14 @@
   margin-right: 12px;
   -webkit-app-region: drag;
 }
+.app_control_bar {
+  display: flex;
+  background-color: #e6f4ff;
+  font-size: 12px;
+  padding: 4px 0;
+}
+.app_control_bar_item {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}

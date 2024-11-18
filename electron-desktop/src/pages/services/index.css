@@ -31,3 +31,12 @@
     width: calc(76vw - 20px); /* 屏幕宽度小于 480px 时，每行放 1 个卡片 */
   }
 }
+.services_webview_title_bar {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+.services_webview_title_bar_drag {
+  -webkit-app-region: drag;
+  flex: 1;
+}

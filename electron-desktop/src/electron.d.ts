@@ -1,6 +1,8 @@
 declare global {
   interface Window {
     electron: {
+      minWindow: () => void;
+      closeWindow: () => void;
       triggerShortcut: (url: string, headers: string) => void;
       startDownload: (url: string) => void;
       onFileSaved: (callback: (encryptedData: string) => void) => void;
