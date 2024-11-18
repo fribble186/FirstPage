@@ -48,6 +48,7 @@ const AppContainer = () => {
   }, [canGoBack]);
 
   const handleNavigationStateChange = (navState: WebViewNavigation) => {
+    console.log("navState", navState);
     setCanGoBack(navState.canGoBack);
   };
   return (
@@ -59,9 +60,11 @@ const AppContainer = () => {
       onLoadEnd={endLoadWebView}
       setSupportMultipleWindows={false}
       onShouldStartLoadWithRequest={(request) => {
-        console.log("onShouldStartLoadWithRequest");
+        console.log("onShouldStartLoadWithRequest", request.url, url);
         // 检查 URL，判断是否为内部链接
-        const isInternalLink = request.url.startsWith(url);
+
+        const isInternalLink =
+          new URL(request.url).hostname === new URL(url).hostname;
 
         if (isInternalLink) {
           // 返回 true 表示在 WebView 内加载
